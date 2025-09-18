@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="{% static 'usuarios/style.css' %}">
+  <title>Agregar</title>
+</head>
+<body>
+  <header class="titulo">
+    <h2>Formulario Nuevo Usuario</h2>
+  </header>
+    <div class="contenedor">
+      <div class="contenedor_formulario">
+        <form method="post" class="formulario">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button class="boton2" type="submit">Guardar</button>
+        </form>
+      </div>
+    </div>
+    <div class="contenedor_2">
+        <a href="{% url 'lista' %}">
+        <button class="boton">Regresar</button>
+        </a>
+    </div>
+</body>
+</html>

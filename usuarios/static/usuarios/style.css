@@ -1,0 +1,60 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 2;
+}
+.titulo{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+.agregar{
+    background-color: aliceblue;
+    color: red;
+}
+.contenedor{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+.contenedor_2{
+    margin-top: 1rem;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.contenedor_formulario{
+    width: 30%;
+    background-color: antiquewhite;
+    border-radius: 5px;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+}
+.formulario{
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+.boton{
+    background-color: #0084FF;
+    border: none;
+    border-radius: 2px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+.boton2{
+    text-align: center;
+    background-color: #6BDB9C;
+     border: none;
+    border-radius: 2px;
+    padding: 0.5rem;
+    cursor: pointer;
+}

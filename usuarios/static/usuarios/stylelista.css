@@ -1,0 +1,21 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before,*:after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 2;
+}
+.contenedor1{
+    padding-bottom: 2rem;
+}
+.boton_agregar{
+    background-color: #6BDB9C;
+    border: none;
+    border-radius: 2px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
