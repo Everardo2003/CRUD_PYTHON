@@ -8,17 +8,20 @@
     <link rel="stylesheet" type="text/css" href="{% static 'usuarios/stylelista.css' %}">
 </head>
 <body>
-    <h1>Usuarios</h1>
+    <header class="titulo">
+        <h1 >Usuarios</h1>
+    </header>
     <!-- Botón para agregar usuario -->
     <div class="contenedor1">
       <a href="{% url 'crear' %}" >
         <button class="boton_agregar">Agregar usuario</button>
       </a>
     </div>
-    <div>
-      <table border="1" cellpadding="5">
+    <div class="contenedor">
+        <div class="contenedor_tabla">
+            <table>
         <thead>
-            <tr>
+            <tr class="centrar">
                 <th>ID</th>
                 <th>Nombre</th>
                 <th>Edad</th>
@@ -32,23 +35,27 @@
                 <td>{{ usuario.nombre }}</td>
                 <td>{{ usuario.edad }}</td>
                 <td>
-                    <!-- Botón para editar -->
-                    <a href="{% url 'editar' usuario.id %}">Editar</a>
-
-                    <!-- Botón para eliminar -->
-                    <form action="{% url 'eliminar' usuario.id %}" method="post" style="display:inline;">
-                        {% csrf_token %}
-                        <button type="submit">Eliminar</button>
-                    </form>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td colspan="4">No hay usuarios.</td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
+                    <div class="contenedor_botones">
+                         <!-- Botón para editar -->
+                        <a href="{% url 'editar' usuario.id %}">
+                            <button class="boton_editar">Editar</button>
+                        </a>
+                        <!-- Botón para eliminar -->
+                        <form action="{% url 'eliminar' usuario.id %}" method="post" style="display:inline;">
+                            {% csrf_token %}
+                            <button class="boton_eliminar" type="submit">Eliminar</button>
+                        </form>
+                    </div>
+                  </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4">No hay usuarios.</td>
+                </tr>
+                {% endfor %}
+             </tbody>
+            </table>
+        </div>
     </div>
 </body>
 </html>
