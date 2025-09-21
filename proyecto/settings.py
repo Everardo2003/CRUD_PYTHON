@@ -80,7 +80,7 @@ DATABASES = {
         'NAME': 'crud',
         'USER': 'everardo',
         'PASSWORD': '12345',
-        'HOST': '192.168.0.215',  # la IP de tu Ubuntu Server
+        'HOST': 'localhost',  # la IP de tu Ubuntu Server
         'PORT': '5432',
     }
 }
